@@ -3,10 +3,10 @@ import './polygons-style.scss';
 
 const Polygons = () => {
     return(
-        <div class="polygons">
-            <svg class="up-left side" />
-            <svg class="up-mid"/>
-            <svg class="up-right side"/>
+        <div className="polygons">
+            <svg className="up-left side" />
+            <svg className="up-mid"/>
+            <svg className="up-right side"/>
         </div>
     )
 }
