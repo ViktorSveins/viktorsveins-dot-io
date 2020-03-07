@@ -1,0 +1,62 @@
+@import '../vars.scss';
+
+.polygons {
+    height: 100%;
+    display: flex;
+    
+    svg {
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+    }
+    .side {
+        width: 28.5%;
+        @media (min-width: $tablet) {
+            width: 47.5%;
+        }
+        @media (min-width: $desktop) {
+            width: 28.5%;
+        }
+    }
+
+    .up-left {
+        background-color: $green;
+        left: 0%;
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+
+        @media (max-width: $tablet) {
+            height: 28.5%;
+        }
+        
+        .hamburger {
+            margin: 5px;
+            fill: $red;
+        }
+    }
+    
+    .up-right {
+        background-color: $cyan;
+        right: 0%;
+        clip-path: polygon(100% 100%, 0 0, 100% 0);
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+    
+    .up-mid {
+        background-color: $darkcyan;
+        width: 100%;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+        
+        @media (min-width: $tablet) {
+            clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+            left: 2.5%;
+            width: 95%;
+        }
+        
+        @media (min-width: $desktop) {
+            clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+        }
+    }
+}
