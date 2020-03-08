@@ -1,2 +1,2 @@
 ## viktorsveins.io
-- A website about me, made with React
+A website about me, made with React
