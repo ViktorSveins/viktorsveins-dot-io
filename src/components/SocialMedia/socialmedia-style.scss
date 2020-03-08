@@ -1,4 +1,17 @@
+@import '../vars.scss';
+
 .social-media {
+  position: absolute;
+  height: 25%;
+  top: 2.5%;
+  right: 0.5rem;
+  width: 50px;
+  z-index: 8;
+
+  @media (min-width: $tablet) {
+    top: 5%;
+  }
+  
   .medias {
     display: flex;
     flex-direction: column;
@@ -12,6 +25,10 @@
     
     a {
       margin: 10%;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 }
