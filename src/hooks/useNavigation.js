@@ -1,8 +1,8 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
-const useBurger = () => {
+const useNavigation = () => {
   const [isOpen, setOpen] = React.useState(false);
-  console.log(isOpen)
 
   const handleBurgerClick = () => {
     setOpen(!isOpen);
@@ -15,4 +15,4 @@ const useBurger = () => {
   return { handleBurgerClick, handleLinkClick, isOpen };
 }
 
-export default useBurger;
+export default useNavigation;
