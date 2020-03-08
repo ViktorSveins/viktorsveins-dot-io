@@ -1,40 +1,49 @@
 @import '../../vars.scss';
 
 .landing {
-    height: 100%;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
+	height: 100%;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	
+	.mag-pointer {
+		margin-left: 2%;
+	}
+	
+	.me-pointer {
+		margin-right: 2%;
+	}
+	
+	.mag-pointer,
+	.me-pointer {
+		padding-top: 10%;
+		width: 18%;
 
-    .mag-pointer {
-        padding-left: 5%;
-    }
+		@media (min-width: $tablet) {
+			padding-top: 25%;
+		}
+		
+		@media (min-width: $desktop) {
+			padding-top: 18%;
+		}
+	}
+	
+	.profile-picture {
+		border-radius: 50%;
+		width: 60%;
+		
+		@media (min-width: $tablet) {
+			width: 30%;
+		}
+	}
+	
+	.social-media {
+		position: absolute;
+		height: 25%;
+		top: 0%;
+		right: 0;
+		width: 50px;
+	}
 
-    .me-pointer {
-        padding-right: 5%;
-    }
-
-    .mag-pointer, .me-pointer {
-        padding-top: 10%;
-        width: 20%;
-
-        @media (min-width: $tablet) {
-            padding-top: 25%;
-        }
-        @media (min-width: $desktop) {
-            padding-top: 18%;
-        }
-    }
-
-    .profile-picture {
-        border-radius: 50%;
-        width: 60%;
-
-        @media (min-width: $tablet) {
-            width: 30%;
-        }
-    }
-
-    
 }

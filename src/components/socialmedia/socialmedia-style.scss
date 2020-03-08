@@ -1,0 +1,16 @@
+.social-media {
+  .medias {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+    
+    a {
+      padding: 10% 0;
+    }
+  }
+}
