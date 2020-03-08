@@ -5,18 +5,12 @@
     display: flex;
     
     svg {
+        position: fixed;
         z-index: -1;
         height: 100%;
-        position: absolute;
     }
     .side {
         width: 28.5%;
-        @media (min-width: $tablet) {
-            width: 47.5%;
-        }
-        @media (min-width: $desktop) {
-            width: 28.5%;
-        }
     }
 
     .up-left {
@@ -49,13 +43,10 @@
         width: 100%;
         clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
         
+        
         @media (min-width: $tablet) {
-            clip-path: polygon(50% 0, 0% 100%, 100% 100%);
             left: 2.5%;
             width: 95%;
-        }
-        
-        @media (min-width: $desktop) {
             clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
         }
     }

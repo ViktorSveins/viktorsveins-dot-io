@@ -1,0 +1,40 @@
+@import '../../vars.scss';
+
+.landing {
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+
+    .mag-pointer {
+        padding-left: 5%;
+    }
+
+    .me-pointer {
+        padding-right: 5%;
+    }
+
+    .mag-pointer, .me-pointer {
+        padding-top: 10%;
+        width: 20%;
+
+        @media (min-width: $tablet) {
+            padding-top: 25%;
+        }
+        @media (min-width: $desktop) {
+            padding-top: 18%;
+        }
+    }
+
+    .profile-picture {
+        border-radius: 50%;
+        width: 60%;
+
+        @media (min-width: $tablet) {
+            width: 30%;
+        }
+    }
+
+    
+}

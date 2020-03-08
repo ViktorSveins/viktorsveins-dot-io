@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Polygons from './components/Polygons';
+import Polygons from './components/Polygons/Polygons';
+import LandingPage from './components/pages/Landing/LandingPage';
 
 function App() {
   return (
+    <>
     <Polygons />
+    <LandingPage />
+    </>
   );
 }
 
