@@ -1,0 +1,57 @@
+@import '../../vars.scss';
+
+.menu {
+  flex-direction: column;
+  justify-content: center;
+  background: $red;
+  height: 100%;
+  width: 0;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: transform 0.3s ease-in-out;
+  transition:  width 0.3s linear;
+  
+  &.open {
+    display: flex;
+    width: 100%;
+    
+    @media (min-width: $tablet) {
+      width: 50%;
+    }
+    @media (min-width: $desktop) {
+      width: 28.5%;
+    }
+    
+    
+    div {
+      pointer-events: visible;
+      height: auto;
+      opacity: 1;
+      transition: opacity 0.3s linear 0.3s;
+    }
+  }
+  
+  div {
+    pointer-events: none;
+    transition: display 0.1s linear 0.3s;
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    color: $cream;
+    text-decoration: none;
+    transition: color 0.3s linear;
+    font-size: 1.5rem;
+    &:hover {
+      color: $green;
+    }
+  }
+  
+}
