@@ -1,0 +1,48 @@
+@import '../../vars.scss';
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swa');
+
+.about-me {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $cream;
+  font-family: 'Righteous', cursive;
+
+  .about-picture {
+    width: 60%;
+    border-radius: 50%;
+    margin-top: auto;
+    @media (min-width: $tablet) {
+      width: 30%;
+		}
+  }
+
+  .bio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+      text-align: center;
+      font-weight: normal;
+    }
+  
+    p {
+      width: 90%;
+  
+      @media (min-width: $tablet) {
+        width: 65%;
+      }
+      @media (min-width: $desktop) {
+        width: 80%;
+      }
+    }
+  
+    a {
+      color: $cream;
+    }
+  }
+}
