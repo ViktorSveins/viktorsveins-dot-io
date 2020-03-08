@@ -16,6 +16,11 @@
     justify-content: start;
   }
 
+  @media (max-height: 724px) {
+    justify-content: start;
+
+  }
+
   .about-picture {
     width: 40%;
     border-radius: 50%;

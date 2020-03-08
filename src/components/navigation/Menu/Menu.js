@@ -1,15 +1,16 @@
 import React from 'react';
 import './menu-style.scss';
+import { NavLink } from 'react-router-dom';
 
 const Menu = ({isOpen, handleLinkClick}) => {
-  return(
+  return (
     <div className={'menu ' + (isOpen ? 'open' : '')}>
-      <div onClick={() => handleLinkClick()}>
+      <NavLink exact to="/" className="link" onClick={() => handleLinkClick()}>
         - Welcome
-      </div>
-      <div onClick={() => handleLinkClick()}>
+      </NavLink>
+      <NavLink exact to="/aboutme" className="link" onClick={() => handleLinkClick()}>
         - About me
-      </div>
+      </NavLink>
     </div>
   )
 }

@@ -26,7 +26,7 @@
     }
     
     
-    div {
+    .link {
       pointer-events: visible;
       height: auto;
       opacity: 1;
@@ -34,7 +34,7 @@
     }
   }
   
-  div {
+  .link {
     pointer-events: none;
     transition: display 0.1s linear 0.3s;
     cursor: pointer;

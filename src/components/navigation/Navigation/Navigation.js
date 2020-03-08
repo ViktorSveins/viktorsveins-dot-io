@@ -1,13 +1,13 @@
 import React from 'react';
 import Menu from '../Menu/Menu';
 import Burger from '../Burger/Burger';
-import useBurger from '../../../hooks/useBurger';
+import useNavigation from '../../../hooks/useNavigation';
 
 const Navigation = () => {
-  const { handleBurgerClick, handleLinkClick, isOpen } = useBurger();
+  const { handleBurgerClick, handleLinkClick, isOpen } = useNavigation();
   return (
     <div className="navigation">
-      <Menu isOpen={isOpen} handleBurgerClick={handleLinkClick}/>
+      <Menu isOpen={isOpen} handleLinkClick={handleLinkClick}/>
       <Burger isOpen={isOpen} handleBurgerClick={handleBurgerClick} />
     </div>
   )
