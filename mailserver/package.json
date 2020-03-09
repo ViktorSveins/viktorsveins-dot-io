@@ -1,0 +1,18 @@
+{
+  "name": "mailserver",
+  "version": "1.0.0",
+  "description": "mailserver for contact form",
+  "main": "mailservice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon server.js"
+  },
+  "author": "Viktor Sveinsson",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mailgun-js": "^0.22.0"
+  }
+}
