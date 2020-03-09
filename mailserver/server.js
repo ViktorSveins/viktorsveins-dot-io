@@ -17,9 +17,9 @@ if(env.error) {
 app.post('/api/send', function(req, res){
   mailService.sendMail(req.body, function(mail){
     return res.status(200).json(mail);
-  }), function(err, code){
-    return res.status(code).json(err);
-  }
+  }, function(err, code){
+    return res.status(404).json(err);
+  });
 });
 
 // Start server
