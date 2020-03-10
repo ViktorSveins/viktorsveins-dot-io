@@ -11,6 +11,9 @@ const Menu = ({isOpen, handleLinkClick}) => {
       <NavLink exact to="/aboutme" className="link" onClick={() => handleLinkClick()}>
         - About me
       </NavLink>
+      <NavLink exact to="/contactme" className="link" onClick={() => handleLinkClick()}>
+        - Contact me
+      </NavLink>
     </div>
   )
 }
