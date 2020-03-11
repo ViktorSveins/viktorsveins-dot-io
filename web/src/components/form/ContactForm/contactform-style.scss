@@ -1,0 +1,53 @@
+@import '../../vars.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  .input-group {
+    input {
+      width: 100%;
+      padding: 10px 0;
+      background: none;
+      border: none;
+      border-bottom: 2px solid  transparentize($color: $red, $amount: 0.5);
+      color: $cream;
+      font-size: 14px;
+      outline: none;
+      transition: border-color .2s;
+  
+      &::placeholder {
+        color: transparentize($color: $cream, $amount: 0.2);
+      }
+  
+      &:focus {
+        border-bottom-color: $red;
+      }
+    }
+    
+    .input-error {
+      font-size: small;
+      color: black;
+      
+      &-star {
+        color: red;
+      }
+    }
+  }
+
+  .input-submit {
+    background: $red;
+    border: none;
+    color: $cream;
+    font-size: 14px;
+    padding: 5px 0;
+    margin-top: 10px;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    
+    &:hover {
+      background-color: lighten($color: $red, $amount: 2);
+    }
+  }
+}

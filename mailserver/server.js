@@ -16,9 +16,9 @@ if(env.error) {
 // API endpoint: Send mail
 app.post('/api/send', function(req, res){
   // Check if all required fields were received
-  if(!req.body.name || req.body.name === '') { return status(400).send('Name missing'); }
-  if(!req.body.email || req.body.email === '') { return status(400).send('Email missing'); }
-  if(!req.body.message || req.body.message === '') { return status(400).send('Message missing'); }
+  if(!req.body.name || req.body.name === '') { return res.status(400).send('Name missing'); }
+  if(!req.body.email || req.body.email === '') { return res.status(400).send('Email missing'); }
+  if(!req.body.message || req.body.message === '') { return res.status(400).send('Message missing'); }
 
   // Send to mailservice
   mailService.sendMail(req.body, function(mail){

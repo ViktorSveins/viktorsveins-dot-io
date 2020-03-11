@@ -3,8 +3,8 @@ import sendMail from '../../../services/mailService';
 import useForm from '../../../hooks/useForm';
 import Form from '../Form/Form';
 import Input from '../Input/Input';
-import TextArea from '../TextArea/TextArea';
 import validateContactForm from './validateContactForm';
+import './contactform-style.scss';
 
 const ContactForm = ({ title }) => {
 	const initialState = {
@@ -45,7 +45,7 @@ const ContactForm = ({ title }) => {
 					 errorMessage={ errors.name }
 					 onInput={ handleChangeText } 
 				/>
-				<TextArea 
+				<Input
 					 type="textarea"
 					 name="message"
 					 value={ values.message }
@@ -54,7 +54,11 @@ const ContactForm = ({ title }) => {
 					 errorMessage={ errors.message }
 					 onInput={ handleChangeText } 
 				/>
-				<input type="submit" value="Send!" className="input-submit"/>
+				<input 
+					type="submit" 
+					value="Send!" 
+					className="input-submit"
+				/>
 			</Form>
 		</>
   );

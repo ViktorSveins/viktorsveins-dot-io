@@ -15,10 +15,10 @@ var mailgun = require('mailgun-js')({apiKey: API_KEY, domain: DOMAIN});
 // Send mail
 const sendMail = (message, cb, errCb) => {
     var data = {
-        from: `${message.name} <${message.sender}>`,
+        from: `${message.name} <${message.email}>`,
         to: RECEIVER,
         subject: 'viktorsveins.io Contact Form',
-        text: message.body
+        text: message.message
       };      
       
       mailgun.messages().send(data, function (error, body) {

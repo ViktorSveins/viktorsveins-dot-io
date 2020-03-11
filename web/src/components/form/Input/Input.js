@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Input = ({ value, onInput, type, errorMessage, label, placeholder, name, htmlId, className }) => {
+const Input = ({ value, onInput, type, errorMessage, label, placeholder, name, htmlId, className, autocomplete }) => {
   return (
-    <div className={'input ' + {className}}>
+    <div className={'input-group ' + {className}}>
       { label ? <label htmlFor={ htmlId } className='input-label'>{ label }</label> : <></> }
       <input
         type={ type }
@@ -11,7 +11,9 @@ const Input = ({ value, onInput, type, errorMessage, label, placeholder, name, h
         name={ name }
         id={ htmlId }
         placeholder={ placeholder }
-        className='input-control' />
+        className='input-control'
+        autocomplete={ autocomplete ? autocomplete : 'off'} />
+      <span className='input-error-star'>{errorMessage ? '*' : ''}</span>
       <span className='input-error'>{ errorMessage }</span>
     </div>
   );
