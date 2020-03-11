@@ -3,12 +3,13 @@ import sendMail from '../../../services/mailService';
 import useForm from '../../../hooks/useForm';
 import Form from '../Form/Form';
 import Input from '../Input/Input';
+import TextArea from '../TextArea/TextArea';
 import validateContactForm from './validateContactForm';
 
 const ContactForm = ({ title }) => {
 	const initialState = {
 		email: '',
-		subject: '',
+		name: '',
 		message: ''
 	}
 	
@@ -37,15 +38,15 @@ const ContactForm = ({ title }) => {
 				/>
 				<Input
 					 type="text"
-					 name="subject"
-					 value={ values.subject }
-					 htmlId="subject"
-					 placeholder="Subject"
-					 errorMessage={ errors.subject }
+					 name="name"
+					 value={ values.name }
+					 htmlId="name"
+					 placeholder="Your name"
+					 errorMessage={ errors.name }
 					 onInput={ handleChangeText } 
 				/>
-				<Input
-					 type="text"
+				<TextArea 
+					 type="textarea"
 					 name="message"
 					 value={ values.message }
 					 htmlId="message"
