@@ -1,12 +1,21 @@
 const env = require('dotenv').config({path: './mailserver/.env'});
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
+const cors = require('cors');
 const mailService = require('./mailservice');
+
+const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Parse all incoming request bodies to JSON
 app.use(bodyParser.json());
+
+// Set allowed origin
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 // Check if environment variables were loaded from the .env file
 if(env.error) {
