@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.scss';
 import Polygons from './components/Polygons/Polygons';
 import LandingPage from './components/pages/LandingPage/LandingPage';

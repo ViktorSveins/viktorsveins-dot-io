@@ -4,16 +4,19 @@ const useForm = (initialState, validate, submitHandler) => {
   const [values, setValues] = React.useState(initialState);
   const [errors, setErrors] = React.useState({});
   const [isSubmitting, setSubmitting] = React.useState(false);
+  const [response, setResponse] = React.useState();
 
   React.useEffect(() => {
     if (isSubmitting) {
       const noErrors = Object.keys(errors).length === 0;
+      
       if (noErrors) {
         submitHandler(values);
       }
+      
       setSubmitting(false);
     }
-  }, [errors]);
+  }, [values, errors, submitHandler, isSubmitting]);
 
   const handleChangeText = e => {
     setValues({
@@ -34,7 +37,7 @@ const useForm = (initialState, validate, submitHandler) => {
     setErrors({});
   };
 
-  return { handleSubmit, handleChangeText, values, errors, isSubmitting, resetFields };
+  return { handleSubmit, handleChangeText, values, errors, isSubmitting, response, setResponse, resetFields };
 };
 
 export default useForm;

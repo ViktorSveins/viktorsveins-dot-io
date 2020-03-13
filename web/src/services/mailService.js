@@ -7,7 +7,12 @@ const sendMail = message => {
         headers: { 
             'Content-Type': 'application/json',
          }
-    });
+    })
+    .then(res => {
+        if(!res.ok) { throw new Error(res.statusText) }
+        else { return true; }
+    })
+    .catch(() => false )
 };
 
 export default sendMail;

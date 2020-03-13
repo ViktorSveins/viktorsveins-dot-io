@@ -12,7 +12,7 @@ const Input = ({ value, onInput, type, errorMessage, label, placeholder, name, h
         id={ htmlId }
         placeholder={ placeholder }
         className='input-control'
-        autocomplete={ autocomplete ? autocomplete : 'off'} />
+        autoComplete={ autocomplete ? autocomplete : 'off'} />
       <span className='input-error-star'>{errorMessage ? '*' : ''}</span>
       <span className='input-error'>{ errorMessage }</span>
     </div>

@@ -13,11 +13,19 @@ const ContactForm = ({ title }) => {
 		message: ''
 	}
 	
-	const submitHandler = async message => {
-		sendMail(message);
+ 	const submitHandler = async message => {
+		sendMail(message).then(success => {
+			if(success) { 
+				resetFields();
+				setResponse('Success');
+			}
+			else {
+				setResponse('Failure');
+			}
+		});
 	}
 
-	const { handleSubmit, handleChangeText, values, errors, isSubmitting, resetFields } = useForm(
+	const { handleSubmit, handleChangeText, values, errors, isSubmitting, response, setResponse, resetFields } = useForm(
 		initialState,
 		validateContactForm,
 		submitHandler
@@ -58,8 +66,11 @@ const ContactForm = ({ title }) => {
 					type="submit" 
 					value="Send!" 
 					className="input-submit"
+					disabled={isSubmitting}
 				/>
 			</Form>
+			{response === 'Success' ? <p className='submit'>Message sent</p> : <></>}
+			{response === 'Failure'? <p className='submit'>An error occured, try again later</p>: <></>}
 		</>
   );
 }
