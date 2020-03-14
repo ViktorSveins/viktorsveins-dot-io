@@ -1,7 +1,6 @@
 const env = require('dotenv').config({path: './mailserver/.env'});
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const mailService = require('./mailservice');
 
 const app = express();
