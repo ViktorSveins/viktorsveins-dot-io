@@ -4,15 +4,16 @@ const bodyParser = require('body-parser');
 const mailService = require('./mailservice');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3500;
 
 // Parse all incoming request bodies to JSON
 app.use(bodyParser.json());
 
 // Set allowed origin
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Origin", "https://viktorsveins.io");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Credentials");
   next();
 });
 
